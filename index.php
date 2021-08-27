@@ -72,16 +72,37 @@ $faqs = [
 </head>
 <body>
 
-    <header>
-        <div>
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="title">
-            Domande frequenti
-        </div>
-        <div class="profile">
-            <i class="fas fa-th"></i>
-            <div class="img-profile">G</div>
+    <header class="container-fluid">
+        <div class="header-inner row">
+
+            <div class="col-1 d-block d-lg-none">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="title col-9 d-block d-lg-none">
+                Domande frequenti
+            </div>
+            <div class="title col-10 d-none d-lg-block">
+                <div class="title-inner">
+                    <div class="img-container">
+                        <img src="./img/Google-Logo.png" alt="">
+                    </div>
+                    Privacy e Termini
+
+                </div>
+            </div>
+            <div class="profile col-2">
+                <i class="fas fa-th"></i>
+                <div class="img-profile">G</div>
+            </div>
+            <div class="links d-none d-lg-block">
+                <ul>
+                    <li><a href="#">Introduzione</a></li>
+                    <li><a href="#">Norme sulla privacy</a></li>
+                    <li><a href="#">Termini di servizio</a></li>
+                    <li><a href="#">Tecnologie</a></li>
+                    <li><a href="#">Domande frequenti</a></li>
+                </ul>
+            </div>
         </div>
 
     </header>
