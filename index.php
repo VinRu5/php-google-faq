@@ -62,26 +62,69 @@ $faqs = [
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <title>PHP Google FAQ</title>
 </head>
 <body>
 
-    <?php
-        foreach ($faqs as $faq) {
-    ?>
+    <header>
+        <div>
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="title">
+            Domande frequenti
+        </div>
+        <div class="profile">
+            <i class="fas fa-th"></i>
+            <div class="img-profile">G</div>
+        </div>
 
-        <h1><?php echo $faq['question']; ?></h1>
+    </header>
 
+    <main class="container">
         <?php
-            foreach ($faq['answer'] as $paragraph) {
+            foreach ($faqs as $faq) {
         ?>
-                <p><?php echo $paragraph; ?></p>
-    <?php
-            }
-        }
-    ?>
 
-    
+            <h1><?php echo $faq['question']; ?></h1>
+
+            <?php
+                foreach ($faq['answer'] as $paragraph) {
+            ?>
+                    <p><?php echo $paragraph; ?></p>
+        <?php
+                }
+            }
+        ?>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+
+            <div>
+                <i class="fas fa-globe"></i>
+                <select name="" id="">
+                    <option value="ita">Italiano</option>
+                    <option value="eng">English</option>
+                </select>
+            </div>
+            <div>
+                <ul>
+                    <li>Google</li>
+                    <li>Tutto su Google</li>
+                    <li>Privacy</li>
+                    <li>Termini</li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+
 </body>
 </html>
