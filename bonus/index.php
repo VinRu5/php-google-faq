@@ -108,20 +108,30 @@ $faqs = [
     </header>
 
     <main class="container">
-        <?php
-            foreach ($faqs as $faq) {
-        ?>
-
-            <h1><?php echo $faq['question']; ?></h1>
-
+        <div class="row">
             <?php
-                foreach ($faq['answer'] as $paragraph) {
+                foreach ($faqs as $faq) {
             ?>
-                    <p><?php echo $paragraph; ?></p>
-        <?php
+
+                <h1 class="col-11"><?php echo $faq['question']; ?></h1>
+                <div class="arrow col-1">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="col-12">
+
+                <?php
+                    foreach ($faq['answer'] as $paragraph) {
+                ?>
+                        <p><?php echo $paragraph; ?></p>
+            <?php
+                    }
+            ?>
+                </div>
+            <?php
                 }
-            }
-        ?>
+            ?>
+            
+        </div>
     </main>
 
     <footer>
@@ -146,6 +156,7 @@ $faqs = [
 
     </footer>
 
+    <script type="text/javascript" src="./js/script.js"></script>
 
 </body>
 </html>
